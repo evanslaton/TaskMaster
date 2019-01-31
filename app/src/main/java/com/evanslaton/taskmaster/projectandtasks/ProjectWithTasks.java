@@ -22,7 +22,7 @@ import java.util.List;
 
 public class ProjectWithTasks extends AppCompatActivity {
     // Variable passed to the activity
-    protected long projectId;
+    protected String projectId;
     protected String projectTitle;
 
     // Database variables
@@ -47,15 +47,15 @@ public class ProjectWithTasks extends AppCompatActivity {
         recyclerView = (RecyclerView) findViewById(R.id.tasks);
 
         // 'Creates' the database
-        projectDatabase = Room.databaseBuilder(getApplicationContext(),
-                ProjectDatabase.class, "projectDatabase")
-                .allowMainThreadQueries()
-                .fallbackToDestructiveMigration()
-                .build();
+//        projectDatabase = Room.databaseBuilder(getApplicationContext(),
+//                ProjectDatabase.class, "projectDatabase")
+//                .allowMainThreadQueries()
+//                .fallbackToDestructiveMigration()
+//                .build();
 
         // Gets project id and title from the intent that directed the user to this activity
         // https://stackoverflow.com/questions/2091465/how-do-i-pass-data-between-activities-in-android-application
-        projectId = Long.parseLong(getIntent().getStringExtra("PROJECT_ID"));
+        projectId = getIntent().getStringExtra("PROJECT_ID");
         projectTitle = getIntent().getStringExtra("PROJECT_TITLE");
 
         // Inserts the project's title at the top of the activity8
@@ -64,14 +64,14 @@ public class ProjectWithTasks extends AppCompatActivity {
 
         // Gets the project and it's tasks from the database
 //        tasks = taskDatabase.taskDao().getByProjectId(projectId);
-        projectWithTasks = projectDatabase.projectDao().getProjectWithTasks(projectId);
+//        projectWithTasks = projectDatabase.projectDao().getProjectWithTasks(projectId);
 
         // FOR TESTING ONLY
-        if (projectWithTasks.tasks.size() == 0) {
-            projectWithTasks.tasks.add(new Task("Task1", 1));
-            projectWithTasks.tasks.add(new Task("Task2", 2));
-            projectWithTasks.tasks.add(new Task("Task3", 3));
-        }
+//        if (projectWithTasks.tasks.size() == 0) {
+//            projectWithTasks.tasks.add(new Task("Task1", 1));
+//            projectWithTasks.tasks.add(new Task("Task2", 2));
+//            projectWithTasks.tasks.add(new Task("Task3", 3));
+//        }
 
         // Creates a layout manager and assigns it to the recycler view
         layoutManager = new LinearLayoutManager(this);

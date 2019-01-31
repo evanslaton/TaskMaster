@@ -1,21 +1,15 @@
 package com.evanslaton.taskmaster.task;
 
-import com.evanslaton.taskmaster.project.Project;
-
 import androidx.room.Entity;
-import androidx.room.ForeignKey;
-import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
-// Creates the relationship between a task and project
-// http://androidkt.com/database-relationships/
-//@Entity(foreignKeys =
-//@ForeignKey(entity = Project.class, parentColumns = "id", childColumns = "projectId"))
 @Entity
 public class Task {
     @PrimaryKey(autoGenerate = true)
     protected long id;
+    protected String firebaseId;
     protected long projectId; // Id of the project the task belongs to
+    protected String projectFirebaseId;
     protected String title;
     protected String state;
 
@@ -23,10 +17,11 @@ public class Task {
     public Task() {}
 
     // Constructor
-    @Ignore
-    public Task(String title, long projectId) {
+//    @Ignore
+    public Task(String title, String projectFirebaseId) {
         this.title = title;
-        this.projectId = projectId;
+        this.firebaseId = "";
+        this.projectFirebaseId = "";
         this.state = "Available";
     }
 
@@ -36,9 +31,19 @@ public class Task {
         return this.id;
     }
 
+    // Gets the task's firebase id
+    public String getFirebaseId() {
+        return this.firebaseId;
+    }
+
     // Gets the id of the project the task belongs to
     public long getProjectId() {
         return this.projectId;
+    }
+
+    // Gets the firebase id of the project that task belongs to
+    public String getProjectFirebaseId() {
+        return this.projectFirebaseId;
     }
 
     // Gets the task title
@@ -55,9 +60,19 @@ public class Task {
     // Sets the task id
     public void setId(long id) { this.id = id; }
 
+    // Sets the task's firebase id
+    public void setFirebaseId(String firebaseId) {
+        this.firebaseId = firebaseId;
+    }
+
     // Sets the id of the project the task belongs to (for room DO NOT USE)
     public void setProjectId(long projectId) {
         this.projectId = projectId;
+    }
+
+    // Sets the firebase id of the project the task belongs to (for room DO NOT USE)
+    public void setFirebaseProjectId(String projectFirebaseId) {
+        this.projectFirebaseId = projectFirebaseId;
     }
 
     // Sets the task title

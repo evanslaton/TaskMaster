@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
                 // Takes the user to the project list activity
                 Intent goToProjectListIntent = new Intent(this, ProjectList.class);
+
                 this.startActivity(goToProjectListIntent);
 
             } else {

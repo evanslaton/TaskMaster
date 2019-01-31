@@ -25,9 +25,10 @@
             android:id="@+id/projectTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingTop="16dp"
             android:paddingRight="32dp"
             android:paddingLeft="32dp"
-            android:paddingBottom="32dp"
+            android:paddingBottom="16dp"
             android:textSize="23dp"
             android:text="Project" />
     </LinearLayout>
