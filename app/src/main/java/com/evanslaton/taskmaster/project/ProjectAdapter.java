@@ -68,7 +68,8 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ViewHold
                         String id = idView.getText().toString();
                         String title = titleView.getText().toString();
                         Log.i("Project Title", title);
-                        goToProject(view, id, title);
+                        Log.i("Project id", id);
+//                        goToProject(view, id, title);
                     }
                 });
 

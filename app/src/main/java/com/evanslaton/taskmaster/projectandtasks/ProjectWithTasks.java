@@ -86,13 +86,13 @@ public class ProjectWithTasks extends AppCompatActivity {
     public void createTask(View v) {
         TextView taskTextView = findViewById(R.id.createTaskTitle);
         String taskTitle = taskTextView.getText().toString();
-        projectDatabase.taskDao().insertTask(new Task(taskTitle, this.projectId));
+//        projectDatabase.taskDao().insertTask(new Task(taskTitle, this.projectId));
         taskTextView.setText(""); // Empties the input field
 
         // Updates the recycler view
-        projectWithTasks = projectDatabase.projectDao().getProjectWithTasks(projectId);
+//        projectWithTasks = projectDatabase.projectDao().getProjectWithTasks(projectId);
 //        tasks = taskDatabase.taskDao().getAll();
-        adapter.setTasks(projectWithTasks.tasks);
+//        adapter.setTasks(projectWithTasks.tasks);
 
         // https://stackoverflow.com/questions/13593069/androidhide-keyboard-after-button-click/13593232 (second answer)
         // Hides the keyboard

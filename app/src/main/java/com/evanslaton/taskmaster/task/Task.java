@@ -8,7 +8,7 @@ public class Task {
     @PrimaryKey(autoGenerate = true)
     protected long id;
     protected String firebaseId;
-    protected long projectId; // Id of the project the task belongs to
+//    protected long projectId; // Id of the project the task belongs to
     protected String projectFirebaseId;
     protected String title;
     protected String state;
@@ -37,9 +37,9 @@ public class Task {
     }
 
     // Gets the id of the project the task belongs to
-    public long getProjectId() {
-        return this.projectId;
-    }
+//    public long getProjectId() {
+//        return this.projectId;
+//    }
 
     // Gets the firebase id of the project that task belongs to
     public String getProjectFirebaseId() {
@@ -66,9 +66,9 @@ public class Task {
     }
 
     // Sets the id of the project the task belongs to (for room DO NOT USE)
-    public void setProjectId(long projectId) {
-        this.projectId = projectId;
-    }
+//    public void setProjectId(long projectId) {
+//        this.projectId = projectId;
+//    }
 
     // Sets the firebase id of the project the task belongs to (for room DO NOT USE)
     public void setFirebaseProjectId(String projectFirebaseId) {
