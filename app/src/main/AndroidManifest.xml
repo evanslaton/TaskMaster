@@ -18,7 +18,8 @@
         </activity>
         <activity
             android:name=".projectandtasks.ProjectWithTasks"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".project.ProjectList" />
+        <activity android:name=".project.ProjectList"></activity>
     </application>
 
 </manifest>

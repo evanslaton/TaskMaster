@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "550735693858",
+    "firebase_url": "https://taskmaster-167b3.firebaseio.com",
+    "project_id": "taskmaster-167b3",
+    "storage_bucket": "taskmaster-167b3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:550735693858:android:128eaf2a706ddcba",
+        "android_client_info": {
+          "package_name": "com.evanslaton.taskmaster"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "550735693858-05vmqp0qn4p5eao2na2t9nu289or3d3n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.evanslaton.taskmaster",
+            "certificate_hash": "7533a2aba3edaf5a16668b0ab04bc5b319c01962"
+          }
+        },
+        {
+          "client_id": "550735693858-063v6oi0b5t6getvsvhoco0jfn0bp28r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6KdHNu34MvmH0Onz0RnMHSU8ShsyuC6o"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "550735693858-063v6oi0b5t6getvsvhoco0jfn0bp28r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

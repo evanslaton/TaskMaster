@@ -15,6 +15,7 @@ import com.evanslaton.taskmaster.projectandtasks.ProjectWithTasks;
 import java.util.List;
 
 // http://www.vogella.com/tutorials/AndroidRecyclerView/article.html
+// https://github.com/JessLovell/taskMaster/blob/review/app/src/main/java/com/taskmaster/taskmaster/MyAdapter.java
 public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ViewHolder> {
     private List<Project> projects;
 
@@ -35,6 +36,13 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ViewHold
     // Constructor
     public ProjectAdapter(List<Project> projects) {
         this.projects = projects;
+    }
+
+    // Adds a new project to projects
+    // https://github.com/JessLovell/taskMaster/blob/review/app/src/main/java/com/taskmaster/taskmaster/MyAdapter.java
+    public void add(Project project) {
+        projects.add(project);
+        notifyItemInserted(projects.size() - 1);
     }
 
     public void setProjects(List<Project> projects) {
@@ -59,8 +67,9 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ViewHold
                         TextView titleView = view.findViewById(R.id.projectTitle);
                         String id = idView.getText().toString();
                         String title = titleView.getText().toString();
-                        Log.i("Project Title", id + " " + title);
-                        goToProject(view, id, title);
+                        Log.i("Project Title", title);
+                        Log.i("Project id", id);
+//                        goToProject(view, id, title);
                     }
                 });
 
@@ -73,8 +82,8 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ViewHold
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         // Replaces the contents of the view with the project id and title
-        holder.projectId.setText(String.valueOf(projects.get(position).getId()));
-        holder.projectTitle.setText(projects.get(position).title);
+        holder.projectId.setText(projects.get(position).getFirebaseId());
+        holder.projectTitle.setText(projects.get(position).getTitle());
     }
 
     // Returns the size of projects (invoked by the layout manager)

@@ -1,7 +1,5 @@
 //package com.evanslaton.taskmaster.task;
 //
-//import com.evanslaton.taskmaster.project.Project;
-//
 //import androidx.room.Database;
 //import androidx.room.RoomDatabase;
 //

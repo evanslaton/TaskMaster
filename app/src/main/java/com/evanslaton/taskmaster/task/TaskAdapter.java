@@ -57,7 +57,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         // Replaces the contents of the view with the project id and title
-        holder.taskId.setText(String.valueOf(tasks.get(position).getId()));
+//        holder.taskId.setText(String.valueOf(tasks.get(position).getId()));
         holder.taskTitle.setText(tasks.get(position).title);
         holder.taskState.setText("State: " + tasks.get(position).state);
     }
