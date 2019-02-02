@@ -1,12 +1,12 @@
 package com.evanslaton.taskmaster.task;
 
-import androidx.room.Entity;
-import androidx.room.PrimaryKey;
+//import androidx.room.Entity;
+//import androidx.room.PrimaryKey;
 
-@Entity
+//@Entity
 public class Task {
-    @PrimaryKey(autoGenerate = true)
-    protected long id;
+//    @PrimaryKey(autoGenerate = true)
+//    protected long id;
     protected String firebaseId;
 //    protected long projectId; // Id of the project the task belongs to
     protected String projectFirebaseId;
@@ -21,17 +21,17 @@ public class Task {
     public Task(String title, String projectFirebaseId) {
         this.title = title;
         this.firebaseId = "";
-        this.projectFirebaseId = "";
+        this.projectFirebaseId = projectFirebaseId;
         this.state = "Available";
     }
 
     // Getters
     // Gets the task id
-    public long getId() {
-        return this.id;
-    }
+//    public long getId() {
+//        return this.id;
+//    }
 
-    // Gets the task's firebase id
+    // Gets the task's Firebase id
     public String getFirebaseId() {
         return this.firebaseId;
     }
@@ -41,7 +41,7 @@ public class Task {
 //        return this.projectId;
 //    }
 
-    // Gets the firebase id of the project that task belongs to
+    // Gets the Firebase id of the project that task belongs to
     public String getProjectFirebaseId() {
         return this.projectFirebaseId;
     }
@@ -58,9 +58,9 @@ public class Task {
 
     // Setters
     // Sets the task id
-    public void setId(long id) { this.id = id; }
+//    public void setId(long id) { this.id = id; }
 
-    // Sets the task's firebase id
+    // Sets the task's Firebase id
     public void setFirebaseId(String firebaseId) {
         this.firebaseId = firebaseId;
     }
@@ -70,7 +70,7 @@ public class Task {
 //        this.projectId = projectId;
 //    }
 
-    // Sets the firebase id of the project the task belongs to (for room DO NOT USE)
+    // Sets the Firebase id of the project the task belongs to (for room DO NOT USE)
     public void setFirebaseProjectId(String projectFirebaseId) {
         this.projectFirebaseId = projectFirebaseId;
     }

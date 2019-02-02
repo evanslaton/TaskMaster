@@ -32,12 +32,19 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> {
     }
 
     // Constructor
-    public TaskAdapter(List<Task> projects) {
-        this.tasks = projects;
+    public TaskAdapter(List<Task> tasks) {
+        this.tasks = tasks;
     }
 
-    public void setTasks(List<Task> projects) {
-        this.tasks = projects;
+    // Adds a new project to projects
+    // https://github.com/JessLovell/taskMaster/blob/review/app/src/main/java/com/taskmaster/taskmaster/MyAdapter.java
+    public void add(Task task) {
+        tasks.add(task);
+        notifyItemInserted(tasks.size() - 1);
+    }
+
+    public void setTasks(List<Task> tasks) {
+        this.tasks = tasks;
         this.notifyDataSetChanged();
     }
 
