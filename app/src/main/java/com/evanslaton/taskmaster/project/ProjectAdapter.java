@@ -40,7 +40,8 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ViewHold
 
     // Adds a new project to projects
     // https://github.com/JessLovell/taskMaster/blob/review/app/src/main/java/com/taskmaster/taskmaster/MyAdapter.java
-    public void add(Project project) {
+    public void add(Project project, String firebaseId) {
+        project.setFirebaseId(firebaseId);
         projects.add(project);
         notifyItemInserted(projects.size() - 1);
     }
@@ -69,7 +70,7 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ViewHold
                         String title = titleView.getText().toString();
                         Log.i("Project Title", title);
                         Log.i("Project id", id);
-//                        goToProject(view, id, title);
+                        goToProject(view, id, title);
                     }
                 });
 
