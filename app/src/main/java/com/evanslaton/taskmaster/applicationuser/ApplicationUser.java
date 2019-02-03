@@ -32,7 +32,7 @@ public class ApplicationUser {
     }
 
     // Gets the list of assigned tasks
-    public Map<String, Boolean> getAssignedTasksasks() {
+    public Map<String, Boolean> getAssignedTasks() {
         return this.assignedTasks;
     }
 

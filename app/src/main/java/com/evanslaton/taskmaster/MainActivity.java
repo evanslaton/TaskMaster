@@ -6,9 +6,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.TextView;
 
 import com.evanslaton.taskmaster.applicationuser.ApplicationUser;
 import com.evanslaton.taskmaster.applicationuser.ApplicationUserProfile;
+import com.evanslaton.taskmaster.project.ProjectList;
 import com.firebase.ui.auth.AuthUI;
 import com.firebase.ui.auth.IdpResponse;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -45,6 +48,8 @@ public class MainActivity extends AppCompatActivity {
                         .setAvailableProviders(providers)
                         .build(),
                 RC_SIGN_IN);
+
+        setUserName();
     }
 
     // Invoked after Firebase sign in
@@ -52,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
+        setUserName();
         if (requestCode == RC_SIGN_IN) {
             IdpResponse response = IdpResponse.fromResultIntent(data);
 
@@ -79,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
-                // Takes the user to the project list activity
+                // Takes the user to their profile
                 Intent goToProfileIntent = new Intent(this, ApplicationUserProfile.class);
                 this.startActivity(goToProfileIntent);
             } else {
@@ -109,9 +115,22 @@ public class MainActivity extends AppCompatActivity {
                 });
     }
 
+    // Puts the user's username on their profile
+    public void setUserName() {
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        TextView username = findViewById(R.id.greeting);
+        username.setText("Hi, " + user.getDisplayName().toString());
+    }
+
     // Takes the user to their profile page
-    public void goToProfile() {
+    public void goToProfile(View v) {
         Intent goToProfileIntent = new Intent(this, ApplicationUserProfile.class);
         this.startActivity(goToProfileIntent);
+    }
+
+    // Takes the user to their profile page
+    public void goToProjects(View v) {
+        Intent goToProjects = new Intent(this, ProjectList.class);
+        this.startActivity(goToProjects);
     }
 }

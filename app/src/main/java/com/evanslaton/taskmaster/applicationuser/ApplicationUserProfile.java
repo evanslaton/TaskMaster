@@ -27,8 +27,7 @@ public class ApplicationUserProfile extends AppCompatActivity {
     public void setUserName() {
         user = FirebaseAuth.getInstance().getCurrentUser();
         TextView username = findViewById(R.id.username);
-//        username.setText("Hi, " + user.getDisplayName().toString());
-        username.setText(String.valueOf(user.getUid()));
+        username.setText("Hi, " + user.getDisplayName().toString());
     }
 
     // Takes the user to the project list activity
