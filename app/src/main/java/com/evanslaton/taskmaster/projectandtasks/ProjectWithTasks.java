@@ -80,7 +80,7 @@ public class ProjectWithTasks extends AppCompatActivity {
                         if (document.exists()) {
                             Log.d(TAG, "DocumentSnapshot data: " + document.getData());
                             project = new Project(document.get("title").toString());
-                            project.setTask((Map<String, String>) document.get("tasks"));
+                            project.setTask((Map<String, Boolean>) document.get("tasks"));
                             project.setNumberOfTasks(project.getTasks().size());
                         } else {
                             Log.d(TAG, "No such document");

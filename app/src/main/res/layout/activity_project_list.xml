@@ -7,7 +7,7 @@
     tools:context=".project.ProjectList">
 
     <TextView
-        android:id="@+id/projectListLabel"
+        android:id="@+id/username"
         android:layout_width="308dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -32,7 +32,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/projectListLabel" />
+        app:layout_constraintTop_toBottomOf="@+id/username" />
 
     <TextView
         android:id="@+id/textView"
