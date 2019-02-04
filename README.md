@@ -20,15 +20,36 @@ This week, we will build up an app that allows tracking tasks on a project. (Hav
 ## Lab 41: TaskMaster with Firebase
 Today, we’ll use Firebase to create a backend for our TaskMaster app
 * Users should be able to log in.
-*   At a minimum, they should be able to log in with email and password.
+  * At a minimum, they should be able to log in with email and password.
 * Users should be able to see all the Projects in a cloud database, and add Tasks to those projects.
-*   (Hint: In a NoSQL database, there are many options for how to store Tasks associated with Projects and Users. Read the Firebase documentation on structuring data carefully, and have fun exploring!)
+  * (Hint: In a NoSQL database, there are many options for how to store Tasks associated with Projects and Users. Read the Firebase documentation on structuring data carefully, and have fun exploring!)
 * A user should be able to “Assign” a task to themself or another user.
 * The user assigned to a task should be able to “Accept” that task, and later “Complete” that task.
 
 |              User Login                |              Profile Page              |              Project List              |            Project1's Tasks            |     Assign User (Incomplete)           |
 |----------------------------------------|----------------------------------------|----------------------------------------|----------------------------------------|----------------------------------------|
 | ![Lab 41](screenshots/screenshot3.png) | ![Lab 41](screenshots/screenshot4.png) | ![Lab 41](screenshots/screenshot5.png) | ![Lab 41](screenshots/screenshot6.png) | ![Lab 41](screenshots/screenshot7.png) |
+
+
+## Lab 42: TaskMaster with Firebase Cloud Functions
+Today, we’ll extend our use of Firebase to take advantage of cloud functions.
+* Users should be able to view all of the tasks assigned to them on a screen.
+* Users should be able to sort the tasks assigned to them based on the title of the task, the state the task is in, or the person who assigned the task to them
+  * This sorting should be done in the cloud, to avoid using too many resources on the user’s phone.
+
+| NA |
+|----|
+| NA |
+
+## Lab 43: TaskMaster Accessibility
+Today, we’ll complete previous feature tasks & ensure that TaskMaster is accessible to all users.
+* Any iconography in your app should be well-labeled with a contentDescription.
+* Use the hint attribute on all editable elements in your app, or labelFor to allow a TextView to serve as a label.
+* Use the focusable attribute to show that a particular ViewGroup consists of one piece of data.
+
+|              hint                |              labelFor              |              focusable              |
+|----------------------------------------|----------------------------------------|----------------------------------------|
+| ![Lab 43](screenshots/accessibility.png) | ![Lab 43](screenshots/accessibility1.png) | ![Lab 43](screenshots/accessibility2.png) |
 
 ## Information Structure Using Firebase
 
