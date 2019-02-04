@@ -17,9 +17,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".projectandtasks.ProjectWithTasks"
+            android:name=".task.TaskList"
             android:parentActivityName=".project.ProjectList" />
-        <activity android:name=".project.ProjectList"></activity>
+        <activity
+            android:name=".project.ProjectList"
+            android:parentActivityName=".applicationuser.ApplicationUserProfile" />
+        <activity
+            android:name=".applicationuser.ApplicationUserProfile"
+            android:label="@string/title_activity_application_user_profile" />
+        <activity
+            android:name=".applicationuser.UserList" />
     </application>
 
 </manifest>

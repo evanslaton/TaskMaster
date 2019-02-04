@@ -1,4 +1,4 @@
-package com.evanslaton.taskmaster.projectandtasks;
+package com.evanslaton.taskmaster.task;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -14,8 +14,6 @@ import android.widget.TextView;
 
 import com.evanslaton.taskmaster.R;
 import com.evanslaton.taskmaster.project.Project;
-import com.evanslaton.taskmaster.task.Task;
-import com.evanslaton.taskmaster.task.TaskAdapter;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -31,7 +29,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-public class ProjectWithTasks extends AppCompatActivity {
+public class TaskList extends AppCompatActivity {
     // Variable passed to the activity
     protected String projectId;
     protected String projectTitle;
@@ -72,7 +70,7 @@ public class ProjectWithTasks extends AppCompatActivity {
     public void getProjectFromFirebase() {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
             DocumentReference docRef = db.collection("projects").document(projectId);
-                docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
                 @Override
                 public void onComplete(@NonNull com.google.android.gms.tasks.Task<DocumentSnapshot> task) {
                     if (task.isSuccessful()) {
@@ -80,7 +78,7 @@ public class ProjectWithTasks extends AppCompatActivity {
                         if (document.exists()) {
                             Log.d(TAG, "DocumentSnapshot data: " + document.getData());
                             project = new Project(document.get("title").toString());
-                            project.setTask((Map<String, String>) document.get("tasks"));
+                            project.setTask((Map<String, Boolean>) document.get("tasks"));
                             project.setNumberOfTasks(project.getTasks().size());
                         } else {
                             Log.d(TAG, "No such document");
@@ -147,7 +145,6 @@ public class ProjectWithTasks extends AppCompatActivity {
     // https://github.com/JessLovell/taskMaster/blob/review/app/src/main/java/com/taskmaster/taskmaster/MainActivity.java
     public void updateRecyclerView(){
         recyclerView = (RecyclerView) findViewById(R.id.tasks);
-//        recyclerView.setHasFixedSize(true);
 
         // Creates a layout manager and assigns it to the recycler view
         layoutManager = new LinearLayoutManager(this);
@@ -173,7 +170,7 @@ public class ProjectWithTasks extends AppCompatActivity {
                                 case ADDED:
                                     Log.d(TAG, "New project: " + dc.getDocument().getData());
                                     if (projectId.equals(dc.getDocument().toObject(Task.class).getProjectFirebaseId())) {
-                                        adapter.add(dc.getDocument().toObject(Task.class));
+                                        adapter.add(dc.getDocument().toObject(Task.class), dc.getDocument().getId());
                                     }
                                     break;
                                 case MODIFIED:

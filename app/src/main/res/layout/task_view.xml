@@ -19,7 +19,7 @@
             android:id="@+id/taskId"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:visibility = "gone" />
+            android:visibility="gone" />
 
         <TextView
             android:id="@+id/taskTitle"
@@ -36,45 +36,14 @@
             android:text="State"
             android:textSize="23dp" />
 
-        <LinearLayout
+        <Button
+            android:id="@+id/assignTask"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:paddingBottom="32dp">
-
-            <!--https://stackoverflow.com/questions/1177020/android-how-to-make-all-elements-inside-linearlayout-same-size-->
-            <Button
-                android:id="@+id/available"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Available"
-                android:textSize="10sp" />
-
-            <Button
-                android:id="@+id/assigned"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Assigned"
-                android:textSize="10sp" />
-
-            <Button
-                android:id="@+id/accepted"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Accepted"
-                android:textSize="10sp" />
-
-            <Button
-                android:id="@+id/finshed"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Finished"
-                android:textSize="10sp" />
-        </LinearLayout>
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Assign"
+            android:textSize="14sp" />
 
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
