@@ -6,74 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <!--<TextView-->
-        <!--android:id="@+id/projectListLabel"-->
-        <!--android:layout_width="308dp"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginStart="24dp"-->
-        <!--android:layout_marginTop="32dp"-->
-        <!--android:layout_marginEnd="24dp"-->
-        <!--android:text="Projects:"-->
-        <!--android:textAlignment="textStart"-->
-        <!--android:textSize="24dp"-->
-        <!--app:layout_constraintEnd_toEndOf="parent"-->
-        <!--app:layout_constraintStart_toStartOf="parent"-->
-        <!--app:layout_constraintTop_toTopOf="parent" />-->
-
-    <!--<androidx.recyclerview.widget.RecyclerView-->
-        <!--android:id="@+id/projects"-->
-        <!--android:layout_width="0dp"-->
-        <!--android:layout_height="0dp"-->
-        <!--android:layout_marginStart="24dp"-->
-        <!--android:layout_marginTop="24dp"-->
-        <!--android:layout_marginEnd="24dp"-->
-        <!--android:layout_marginBottom="24dp"-->
-        <!--app:layout_constraintBottom_toTopOf="@+id/textView"-->
-        <!--app:layout_constraintEnd_toEndOf="parent"-->
-        <!--app:layout_constraintHorizontal_bias="0.0"-->
-        <!--app:layout_constraintStart_toStartOf="parent"-->
-        <!--app:layout_constraintTop_toBottomOf="@+id/projectListLabel" />-->
-
-    <!--<TextView-->
-        <!--android:id="@+id/textView"-->
-        <!--android:layout_width="308dp"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginStart="24dp"-->
-        <!--android:layout_marginEnd="24dp"-->
-        <!--android:layout_marginBottom="24dp"-->
-        <!--android:text="Create A Project:"-->
-        <!--android:textAlignment="textStart"-->
-        <!--android:textSize="24dp"-->
-        <!--app:layout_constraintBottom_toTopOf="@+id/createProjectTitle"-->
-        <!--app:layout_constraintEnd_toEndOf="parent"-->
-        <!--app:layout_constraintStart_toStartOf="parent" />-->
-
-    <!--<EditText-->
-        <!--android:id="@+id/createProjectTitle"-->
-        <!--android:layout_width="308dp"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginStart="24dp"-->
-        <!--android:layout_marginEnd="24dp"-->
-        <!--android:layout_marginBottom="24dp"-->
-        <!--android:ems="10"-->
-        <!--android:hint="Project Title"-->
-        <!--android:inputType="text"-->
-        <!--app:layout_constraintBottom_toTopOf="@+id/createProject"-->
-        <!--app:layout_constraintEnd_toEndOf="parent"-->
-        <!--app:layout_constraintStart_toStartOf="parent" />-->
-
-    <!--<Button-->
-        <!--android:id="@+id/createProject"-->
-        <!--android:layout_width="308dp"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginStart="24dp"-->
-        <!--android:layout_marginEnd="24dp"-->
-        <!--android:layout_marginBottom="32dp"-->
-        <!--android:onClick="createProject"-->
-        <!--android:text="Create Project"-->
-        <!--app:layout_constraintBottom_toBottomOf="parent"-->
-        <!--app:layout_constraintEnd_toEndOf="parent"-->
-        <!--app:layout_constraintStart_toStartOf="parent" />-->
     <TextView
         android:id="@+id/greeting"
         android:layout_width="308dp"
@@ -81,7 +13,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="24dp"
-        android:text="Hi"
+        android:text="@string/hi1"
         android:textAlignment="center"
         android:textSize="24dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -96,7 +28,7 @@
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="32dp"
         android:onClick="goToProfile"
-        android:text="Profile"
+        android:text="@string/profile"
         app:layout_constraintBottom_toTopOf="@+id/goToProjectsButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -109,7 +41,7 @@
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="32dp"
         android:onClick="goToProjects"
-        android:text="Projects"
+        android:text="@string/projects"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

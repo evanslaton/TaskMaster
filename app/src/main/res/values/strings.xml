@@ -4,4 +4,25 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="projects1">Projects</string>
+    <string name="accepted">Accepted:</string>
+    <string name="assigned">Assigned:</string>
+    <string name="hi1">Hi</string>
+    <string name="user">User</string>
+    <string name="task">Task</string>
+    <string name="state">State</string>
+    <string name="assign">Assign</string>
+    <string name="project">Project</string>
+    <string name="hi">Hi</string>
+    <string name="profile">Profile</string>
+    <string name="projects">Projects</string>
+    <string name="project2">Project:</string>
+    <string name="create_a_task">Create A Task:</string>
+    <string name="task_title">Task Title</string>
+    <string name="create_task">Create Task</string>
+    <string name="projects3">Projects:</string>
+    <string name="projects4">Projects:</string>
+    <string name="create_a_project">Create A Project:</string>
+    <string name="project_title">Project Title</string>
+    <string name="create_project">Create Project</string>
 </resources>

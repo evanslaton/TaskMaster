@@ -12,7 +12,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="0dp">
+        tools:layout_editor_absoluteY="0dp"
+        android:focusable="true" >
 
         <!--http://androidsbs.blogspot.com/2013/12/androidvisibility-hide-textview.html-->
         <TextView
@@ -30,6 +31,6 @@
             android:paddingLeft="32dp"
             android:paddingBottom="16dp"
             android:textSize="23dp"
-            android:text="Project" />
+            android:text="@string/project" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

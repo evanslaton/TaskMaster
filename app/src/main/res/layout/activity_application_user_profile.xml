@@ -14,7 +14,7 @@
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="16dp"
         android:onClick="goToProjectList"
-        android:text="Projects"
+        android:text="@string/projects"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -35,12 +35,13 @@
 
     <TextView
         android:id="@+id/acceptedTasks"
+        android:labelFor="@+id/acceptedProjects"
         android:layout_width="308dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="180dp"
         android:layout_marginEnd="24dp"
-        android:text="Accepted:"
+        android:text="@string/accepted"
         android:textAlignment="textStart"
         android:textSize="24dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -49,26 +50,27 @@
 
     <TextView
         android:id="@+id/assignedTasks"
+        android:labelFor="@+id/assignedProjects"
         android:layout_width="308dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
-        android:text="Assigned:"
+        android:text="@string/assigned"
         android:textAlignment="textStart"
         android:textSize="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/username" />
+        app:layout_constraintTop_toBottomOf="@+id/projectListLabel" />
 
     <TextView
-        android:id="@+id/username"
+        android:id="@+id/projectListLabel"
         android:layout_width="308dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
-        android:text="Hi"
+        android:text="@string/hi"
         android:textAlignment="center"
         android:textSize="24dp"
         app:layout_constraintEnd_toEndOf="parent"
