@@ -38,7 +38,7 @@ Today, we’ll use Firebase to create a backend for our TaskMaster app
 
 |          "projects" Collection           |           "tasks" Collection            |           "users" Collection             |
 |------------------------------------------|-----------------------------------------|------------------------------------------|
-|  ![FireBase](screenshots/firebase.png)   |  ![FireBase](screenshots/firebase1.ng)  |  ![FireBase](screenshots/firebase2.png)  |
+|  ![FireBase](screenshots/firebase.png)   |  ![FireBase](screenshots/firebase1.png)  |  ![FireBase](screenshots/firebase2.png)  |
 
 ~~## Information Structure Using Room~~
 
