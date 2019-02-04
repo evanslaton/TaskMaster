@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.evanslaton.taskmaster.R;
-import com.evanslaton.taskmaster.projectandtasks.ProjectWithTasks;
+import com.evanslaton.taskmaster.task.TaskList;
 
 import java.util.List;
 
@@ -96,7 +96,7 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ViewHold
     // Takes the user to the ProjectWithTasks activity
     // https://stackoverflow.com/questions/4298225/how-can-i-start-an-activity-from-a-non-activity-class
     public void goToProject(View v, String id, String title) {
-        Intent goToProjectWithTasksIntent = new Intent(v.getContext(), ProjectWithTasks.class);
+        Intent goToProjectWithTasksIntent = new Intent(v.getContext(), TaskList.class);
 
         // https://stackoverflow.com/questions/2091465/how-do-i-pass-data-between-activities-in-android-application
         goToProjectWithTasksIntent.putExtra("PROJECT_ID", id);

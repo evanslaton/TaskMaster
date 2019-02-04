@@ -5,6 +5,10 @@ public class Task {
     protected String projectFirebaseId;
     protected String title;
     protected String state;
+//    protected Boolean available;
+//    protected Boolean assigned;
+//    protected Boolean accepted;
+//    protected Boolean finished;
 
     // No args constructor
     public Task() {}
@@ -18,6 +22,11 @@ public class Task {
     }
 
     // Getters
+    // Gets the task title
+    public String getTitle() {
+        return this.title;
+    }
+
     // Gets the task's Firebase id
     public String getFirebaseId() {
         return this.firebaseId;
@@ -28,17 +37,16 @@ public class Task {
         return this.projectFirebaseId;
     }
 
-    // Gets the task title
-    public String getTitle() {
-        return this.title;
-    }
-
     // Gets the task state
     public String getState() {
         return this.state;
     }
 
     // Setters
+    // Sets the task title
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
     // Sets the task's Firebase id
     public void setFirebaseId(String firebaseId) {
@@ -48,11 +56,6 @@ public class Task {
     // Sets the Firebase id of the project the task belongs to (for room DO NOT USE)
     public void setFirebaseProjectId(String projectFirebaseId) {
         this.projectFirebaseId = projectFirebaseId;
-    }
-
-    // Sets the task title
-    public void setTitle(String title) {
-        this.title = title;
     }
 
     // Sets the task state
