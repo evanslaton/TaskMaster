@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
                         .build(),
                 RC_SIGN_IN);
 
-        setUserName();
+//        setUserName();
     }
 
     // Invoked after Firebase sign in
@@ -78,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
                             } else {
                                 Log.d(TAG, "No such document, creating user");
                                 createUser(user.getDisplayName(), user.getUid(), db);
+                                setUserName();
                             }
                         } else {
                             Log.d(TAG, "get failed with ", task.getException());
