@@ -51,6 +51,17 @@ Today, we’ll complete previous feature tasks & ensure that TaskMaster is acces
 |----------------------------------------|----------------------------------------|----------------------------------------|
 | ![Lab 43](screenshots/accessibility.png) | ![Lab 43](screenshots/accessibility1.png) | ![Lab 43](screenshots/accessibility2.png) |
 
+## Lab 44: Polish TaskMaster
+Today, we’ll complete previous feature tasks.
+* Complete all feature tasks from the last 4 labs.
+* Build an .apk file that can be directly installed on a device. Include that file in your repo, linked from your README.
+
+[.apk file](app/build/outputs/apk/debug/app-debug.apk)
+
+|              User Login                |              Profile Page              |              Project List              |            Project1's Tasks            |     Assign User (Incomplete)           |
+|----------------------------------------|----------------------------------------|----------------------------------------|----------------------------------------|----------------------------------------|
+| ![Lab 41](screenshots/screenshot3.png) | ![Lab 41](screenshots/screenshot4.png) | ![Lab 41](screenshots/screenshot5.png) | ![Lab 41](screenshots/screenshot6.png) | ![Lab 41](screenshots/screenshot7.png) |
+
 ## Information Structure Using Firebase
 
 * Projects store a collection of the document IDs of the tasks that belong to them.
@@ -74,7 +85,7 @@ Today, we’ll complete previous feature tasks & ensure that TaskMaster is acces
 * Thursday 1/31/2019 - Removed corpse code (from Lab 40) and allowed users to save projects and tasks to Firebase
 * Friday 2/1/2019 - Dealt with gitignore issues
 * Saturday 2/2/2019 - Users can add tasks to a projects and everything is stored in Firebase
-* Sunday 2/3/2019 - Made progress towards allowing users to assign tasks to themselves or other users, verified that hint, labelFor and focusable attributes were used in all applicable cases, updated documentation
+* Sunday 2/3/2019 - Made progress towards allowing users to assign tasks to themselves or other users, verified that hint, labelFor and focusable attributes were used in all applicable cases, created .apk file, updated documentation
 
 ## Resources
 * http://androidkt.com/database-relationships/
