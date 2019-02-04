@@ -55,8 +55,7 @@ Today, we’ll complete previous feature tasks & ensure that TaskMaster is acces
 Today, we’ll complete previous feature tasks.
 * Complete all feature tasks from the last 4 labs.
 * Build an .apk file that can be directly installed on a device. Include that file in your repo, linked from your README.
-
-[.apk file](app/build/outputs/apk/debug/app-debug.apk)
+* [.apk file](app/app-debug.apk)
 
 |              User Login                |              Profile Page              |              Project List              |            Project1's Tasks            |     Assign User (Incomplete)           |
 |----------------------------------------|----------------------------------------|----------------------------------------|----------------------------------------|----------------------------------------|
