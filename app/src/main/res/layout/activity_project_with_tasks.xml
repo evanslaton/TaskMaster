@@ -4,16 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".task.ProjectWithTasks">
+    tools:context=".task.TaskList">
 
     <TextView
         android:id="@+id/projectWithTaskLabel"
+        android:labelFor="@+id/tasks"
         android:layout_width="308dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="24dp"
-        android:text="Project:"
+        android:text="@string/project2"
         android:textAlignment="textStart"
         android:textSize="24dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,12 +36,13 @@
 
     <TextView
         android:id="@+id/textView2"
+        android:labelFor="@+id/createTaskTitle"
         android:layout_width="308dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="24dp"
-        android:text="Create A Task:"
+        android:text="@string/create_a_task"
         android:textAlignment="textStart"
         android:textSize="24dp"
         app:layout_constraintBottom_toTopOf="@+id/createTaskTitle"
@@ -55,7 +57,7 @@
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="24dp"
         android:ems="10"
-        android:hint="Task Title"
+        android:hint="@string/task_title"
         android:inputType="text"
         app:layout_constraintBottom_toTopOf="@+id/createTask"
         app:layout_constraintEnd_toEndOf="parent"
@@ -69,7 +71,7 @@
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="32dp"
         android:onClick="createTask"
-        android:text="Create Task"
+        android:text="@string/create_task"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

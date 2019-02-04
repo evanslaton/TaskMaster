@@ -53,7 +53,7 @@ Today, we’ll use Firebase to create a backend for our TaskMaster app
 * Thursday 1/31/2019 - Removed corpse code (from Lab 40) and allowed users to save projects and tasks to Firebase
 * Friday 2/1/2019 - Dealt with gitignore issues
 * Saturday 2/2/2019 - Users can add tasks to a projects and everything is stored in Firebase
-* Sunday 2/3/2019 - Made progress towards allowing users to assign tasks to themselves or other users, updated documentation
+* Sunday 2/3/2019 - Made progress towards allowing users to assign tasks to themselves or other users, verified that hint, labelFor and focusable attributes were used in all applicable cases, updated documentation
 
 ## Resources
 * http://androidkt.com/database-relationships/
@@ -68,3 +68,4 @@ Today, we’ll use Firebase to create a backend for our TaskMaster app
 * https://github.com/JessLovell/taskMaster/blob/review/app/src/main/java/com/taskmaster/taskmaster/MyAdapter.java
 * https://stackoverflow.com/questions/13485918/android-onclick-listener-in-a-separate-class
 * https://dzone.com/articles/cloud-firestore-read-write-update-and-delete
+* https://stackoverflow.com/questions/24731137/difference-between-androidid-and-androidlabelfor

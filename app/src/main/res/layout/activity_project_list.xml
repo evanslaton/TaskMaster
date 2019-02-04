@@ -7,13 +7,14 @@
     tools:context=".project.ProjectList">
 
     <TextView
-        android:id="@+id/username"
+        android:id="@+id/projectListLabel"
+        android:labelFor="@+id/projects"
         android:layout_width="308dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="24dp"
-        android:text="Projects:"
+        android:text="@string/projects4"
         android:textAlignment="textStart"
         android:textSize="24dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,16 +33,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/username" />
+        app:layout_constraintTop_toBottomOf="@+id/projectListLabel" />
 
     <TextView
         android:id="@+id/textView"
+        android:labelFor="@+id/createProjectTitle"
         android:layout_width="308dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="24dp"
-        android:text="Create A Project:"
+        android:text="@string/create_a_project"
         android:textAlignment="textStart"
         android:textSize="24dp"
         app:layout_constraintBottom_toTopOf="@+id/createProjectTitle"
@@ -56,7 +58,7 @@
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="24dp"
         android:ems="10"
-        android:hint="Project Title"
+        android:hint="@string/project_title"
         android:inputType="text"
         app:layout_constraintBottom_toTopOf="@+id/createProject"
         app:layout_constraintEnd_toEndOf="parent"
@@ -70,7 +72,7 @@
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="32dp"
         android:onClick="createProject"
-        android:text="Create Project"
+        android:text="@string/create_project"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

@@ -28,7 +28,7 @@ import androidx.recyclerview.widget.RecyclerView;
                 super(v);
                 mView = v;
                 userId = v.findViewById(R.id.userId);
-                username = v.findViewById(R.id.username);
+                username = v.findViewById(R.id.projectListLabel);
             }
         }
 
@@ -64,7 +64,7 @@ import androidx.recyclerview.widget.RecyclerView;
                         @Override
                         public void onClick(final View view) {
                             TextView idView = view.findViewById(R.id.userId);
-                            TextView usernameView = view.findViewById(R.id.username);
+                            TextView usernameView = view.findViewById(R.id.projectListLabel);
                             String id = idView.getText().toString();
                             String username = usernameView.getText().toString();
                             Log.i("Username", username + " and " + id);

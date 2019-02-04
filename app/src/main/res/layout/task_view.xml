@@ -12,7 +12,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="0dp">
+        tools:layout_editor_absoluteY="0dp"
+        android:focusable="true" >
 
         <!--http://androidsbs.blogspot.com/2013/12/androidvisibility-hide-textview.html-->
         <TextView
@@ -25,7 +26,7 @@
             android:id="@+id/taskTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Task"
+            android:text="@string/task"
             android:textSize="23dp" />
 
         <TextView
@@ -33,7 +34,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingBottom="8dp"
-            android:text="State"
+            android:text="@string/state"
             android:textSize="23dp" />
 
         <Button
@@ -41,7 +42,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Assign"
+            android:text="@string/assign"
             android:textSize="14sp" />
 
     </LinearLayout>
